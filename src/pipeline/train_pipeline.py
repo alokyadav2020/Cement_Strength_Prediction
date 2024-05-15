@@ -18,13 +18,7 @@ class TrainPipeline:
         try:
             train_path, test_path = self.data_ingestion.initiate_data_ingestion()
 
-            (
-                train_arr,
-                test_arr,
-                preprocessor_file_path,
-            ) = self.data_transformation.initiate_data_transformation(
-                train_file_path=train_path, test_file_path=test_path
-            )
+            (train_arr, test_arr, preprocessor_file_path,) = self.data_transformation.initiate_data_transformation(train_file_path=train_path, test_file_path=test_path )
 
             r2_square = self.model_trainer.initiate_model_trainer(
                 train_array=train_arr,

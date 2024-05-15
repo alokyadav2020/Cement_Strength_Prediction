@@ -28,7 +28,7 @@ class DataIngestion:
 
         try:
             df: pd.DataFrame = export_collection_as_dataframe(
-                db_name="ineuron", collection_name="cement"
+                db_name="CementStrenght", collection_name="CementMaterial"
             )
 
             logging.info("Exported collection as dataframe")

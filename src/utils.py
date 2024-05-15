@@ -10,7 +10,7 @@ from pymongo import MongoClient
 
 from sklearn.metrics import r2_score
 from sklearn.model_selection import train_test_split
-
+from dotenv import load_dotenv
 
 from src.exception import CustomException
 

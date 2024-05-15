@@ -16,6 +16,7 @@ class PredictionFileDetail:
     prediction_output_dirname: str = "predictions"
     prediction_file_name:str =  "predicted_file.csv"
     prediction_file_path:str = os.path.join(prediction_output_dirname,prediction_file_name)
+   
 
 
 
@@ -57,12 +58,8 @@ class PredictionPipeline:
 
     def predict(self, features):
             try:
-                model_path = download_model(
-                    bucket_name="ineuron-test-bucket-123",
-                    bucket_file_name="model.pkl",
-                    dest_file_name="model.pkl",
-                )
-
+                
+                model_path = os.path.join('artifacts','model.pkl')
                 model = load_object(file_path=model_path)
 
                 preds = model.predict(features)

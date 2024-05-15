@@ -2,7 +2,8 @@ from flask import Flask, render_template, jsonify, request, send_file
 from src.exception import CustomException
 from src.logger import logging as lg
 import os,sys
-
+import pandas as pd
+from src.utils import load_object
 from src.pipeline.train_pipeline import TrainPipeline
 from src.pipeline.predict_pipeline import PredictionPipeline
 
@@ -30,7 +31,15 @@ def predict():
         if request.method == "POST":
             data = dict(request.form.items())
             print(data)
-            return jsonify("done")
+            df=pd.DataFrame([data])
+            print(df)
+          
+            model_path = os.path.join('artifacts','model.pkl')
+            model = load_object(file_path=model_path)
+
+            preds = model.predict(df.iloc[:, :8])
+            print(preds)
+            return f"The strength prediction is {preds}"
     except Exception as e:
         raise CustomException(e,sys)
 
