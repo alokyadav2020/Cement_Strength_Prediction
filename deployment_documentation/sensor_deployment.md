@@ -18,7 +18,7 @@ To deploy our project to Aws Ec2 we have some steps which are following:
 
 - Let's check our DockerFile that we've created for our project.
 ```docker
-FROM python:3.8-slim-buster
+FROM python:3.9-slim-buster
 
 WORKDIR /app
 
@@ -26,10 +26,10 @@ COPY . /app
 
 RUN pip install -r requirements.txt
 
-CMD [ "python3","app.py" ]
+CMD [ "python3","application.py" ]
 
 ```
-So our base image is `python:3.8-slim-buster` and our work directory is `app.py` as this is the module where our FastApi app code is written. We are installing the requirements from the requirements.txt and atlast we are giving a command to run the app. That's all about the dockerfile that we have created for this particular project.
+So our base image is `python:3.9-slim-buster` and our work directory is `application.py` as this is the module where our FastApi app code is written. We are installing the requirements from the requirements.txt and atlast we are giving a command to run the app. That's all about the dockerfile that we have created for this particular project.
 
 ## Create Github Actions YAML config file
 

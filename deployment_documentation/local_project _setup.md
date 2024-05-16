@@ -21,7 +21,7 @@ In this part, we will see how to create a conda environment.
 Go to your project folder and open vscode/terminal there. To create a new Conda environment for this particular project, use the following command:
 
 ```bash
-conda create --prefix ./env python=3.8
+conda create --prefix ./env python=3.9
 ```
 
 To activate the environment 
@@ -147,11 +147,11 @@ pip install -r requirements.txt
 Once you are done with the libraries installation, 
 Run
 ```bash
-python app.py
+python application.py
 ```
 
 Open your browser and hit the url belor
 
-- [https://localhost:5000](https://localhost:5000)
+- [https://localhost:8080](https://localhost:8080)
 
 The project should run now in your local pc. 
