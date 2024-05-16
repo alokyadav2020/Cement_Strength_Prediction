@@ -1,4 +1,4 @@
-# 📄✏ Cement Strenght Prediction Project
+# 📄✏ Cement Strength Prediction Project
 
 Concrete is one of the most widely used construction materials, with its compressive strength being a crucial factor in determining the durability and performance of structures. Predicting the compressive strength of concrete accurately is essential for ensuring the safety and longevity of buildings and infrastructure.
 
